@@ -8,6 +8,12 @@ class SimplePage implements iPage{
 
 	public function __construct($im) {
 		$this->im = $im;
+		$this->fontColor = '#000000';
+		$this->hilightColor = 'rgb(255,175,43)';
+	}
+
+	public function setImage($im){
+		$this->im = $im;
 	}
 
 	public function getImage(){
@@ -23,8 +29,5 @@ class SimplePage implements iPage{
 	}
 
 	public function draw(){
-		imagecolorallocate($this->im, 255,255,255);
-		$this->hilightColor = imagecolorallocate($this->im, 255, 175, 43);
-		$this->fontColor = imagecolorallocate($this->im, 0, 0, 0);
 	}
 }

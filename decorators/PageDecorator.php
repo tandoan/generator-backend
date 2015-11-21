@@ -4,6 +4,10 @@ require_once('interfaces/iPage.php');
 abstract class PageDecorator implements iPage {
 	public $pageToBeDecorated;
 
+	public function setImage($im){
+		$this->pageToBeDecorated->setImage($im);
+	}
+
 	public function getImage(){
 		return $this->pageToBeDecorated->getImage();
 	}
